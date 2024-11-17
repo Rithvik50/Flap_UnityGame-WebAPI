@@ -1,0 +1,115 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Container for Centered Content */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Login Form */
+#loginForm {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#loginForm h2 {
+    color: #4e73df;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Leaderboard Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    color: #333333;
+}
+
+th {
+    background-color: #4e73df;
+    color: white;
+}
+
+tr {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #d3e3fc;
+}
+
+/* Messages and Links */
+.status-message {
+    font-size: 1em;
+    color: #ff6f61;
+    margin-top: 10px;
+}
