@@ -12,6 +12,16 @@ $scoreQuery = "SELECT high_score FROM players WHERE username='$username'";
 $scoreResult = mysqli_query($con, $scoreQuery);
 $score = mysqli_fetch_assoc($scoreResult)["high_score"];
 
+$leaderboardQuery = "SELECT username, high_score FROM players ORDER BY high_score DESC";
+$leaderboardResult = mysqli_query($con, $leaderboardQuery);
+$rank = 1;
+while ($row = mysqli_fetch_assoc($leaderboardResult)) {
+    if ($row["username"] == $username) {
+        break;
+    }
+    $rank++;
+}
+
 $achievementQuery = "
     SELECT a.achievement_name, pa.achievement_unlocked 
     FROM achievement a
@@ -34,6 +44,8 @@ $achievementResult = mysqli_query($con, $achievementQuery);
         <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1>
         <br>
         <h2>Your High Score: <?php echo htmlspecialchars($score); ?></h2>
+        <br>
+        <h2>Your Rank: <?php echo htmlspecialchars($rank); ?></h2>
         <br>
         <h2>Your Achievements:</h2>
         <table>
